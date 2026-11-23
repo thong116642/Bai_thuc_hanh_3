@@ -43,7 +43,6 @@ void Xuat(SV sv) {
     printf("Ho ten: %s\tMa sv: %d\tDiem 1: %.2f\tDiem 2: %.2f\tDiem 3: %.2f\n",
            sv.hoten, sv.masv, sv.diem1, sv.diem2, sv.diem3);
 }
-
 void insertHead(LList *L, SV sv) {
     Node *pp = (Node*)malloc(sizeof(Node));
     if (pp == NULL) {

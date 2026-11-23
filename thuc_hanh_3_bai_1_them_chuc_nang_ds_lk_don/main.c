@@ -7,28 +7,23 @@ typedef struct{
 	int masv;
 	float diem1,diem2,diem3;
 }SV;
-
 typedef struct tagNode{
 	SV infor;
 	struct tagNode *link;
 }Node;
-
 typedef struct {
 	Node *pHead;
 	Node *pTail;
 	int spt;
 }LList;
-
 void initList(LList *L){
 	L->pHead = NULL;
 	L->pTail = NULL;
 	L->spt = 0;
 }
-
 int EmptyList(LList L){
 	return L.spt == 0;
 }
-
 void Nhap(SV *sv){
 	printf("Ho ten: ");
     scanf(" %[^\n]", sv->hoten);
@@ -45,7 +40,6 @@ void Nhap(SV *sv){
 void Xuat(SV sv){
     printf("Ho ten: %s\tMa sv: %d\tDiem 1: %.2f\tDiem 2: %.2f\tDiem 3: %.2f\n",  sv.hoten, sv.masv, sv.diem1, sv.diem2, sv.diem3);
 }
-
 void insertHead(LList *L,SV sv){
     Node *pp;
 	pp = (Node*)malloc(sizeof(Node));
